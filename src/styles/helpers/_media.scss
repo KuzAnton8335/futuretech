@@ -1,0 +1,70 @@
+@use "./functions" as *;
+
+$laptop: 1440.98;
+$table: 1023.98;
+$mobail: 767.98;
+$mobail-s: 480.98;
+
+@mixin laptop {
+	@media (width <= rem($laptop)) {
+		@content;
+	}
+}
+
+@mixin laptop-above {
+	@media (width > rem($laptop)) {
+		@content;
+	}
+}
+
+@mixin table {
+	@media (width <= rem($table)) {
+		@content;
+	}
+}
+
+@mixin table-above {
+	@media (width > rem($table)) {
+		@content;
+	}
+}
+
+@mixin mobail {
+	@media (width <= rem($mobail)) {
+		@content;
+	}
+}
+
+@mixin mobail-above {
+	@media (width > rem($mobail)) {
+		@content;
+	}
+}
+
+@mixin mobail-s {
+	@media (width <= rem($mobail-s)) {
+		@content;
+	}
+}
+
+@mixin mobail-s-above {
+	@media (width > rem($mobail-s)) {
+		@content;
+	}
+}
+
+@mixin hover($hasActiveEffectOnMobail: true) {
+	@media (any-hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+
+	@if ($hasActiveEffectOnMobail) {
+		@media (any-hover: none) {
+			&:active {
+				@content;
+			}
+		}
+	}
+}

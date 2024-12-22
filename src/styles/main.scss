@@ -1,0 +1,16 @@
+@use "./base/normalaiz";
+@use "./base/fonts";
+@use "./base/var";
+@use "./base/utils";
+@use "./base/globals";
+
+// helpers
+@use "./helpers/" as *;
+
+body {
+	background-color: darkgreen;
+
+	p {
+		color: red;
+	}
+}
