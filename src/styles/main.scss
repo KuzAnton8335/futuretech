@@ -1,16 +1,14 @@
-@use "./base/normalaiz";
-@use "./base/fonts";
-@use "./base/var";
-@use "./base/utils";
-@use "./base/globals";
+@use "normalaiz";
+@use "fonts";
+@use "var";
+@use "utils";
+@use "globals";
 
-// helpers
-@use "./helpers/" as *;
-
-body {
-	background-color: darkgreen;
-
-	p {
-		color: red;
-	}
-}
+@use "helpers" as *;
+// header
+@use "./blocks/icons";
+@use "./blocks/logo";
+@use "./blocks/button";
+@use "./blocks/burger-button";
+@use "./blocks/header";
+// /header

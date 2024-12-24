@@ -5,12 +5,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Futere Tech | Home</title>
-  <link rel="stylesheet" href="./src/styles/main.scss">
   <script type="module" src="./src/app/main.js"></script>
 </head>
 
+<!-- !!TODO:Остановился на 01:53!! -->
+
 <body>
-  <!-- :TODO:Отстановился на видео 34:14 -->
+  <header class="header">
+    <div class="header__promo">
+      <div class="header__prormo-inner container">
+        <a href="./" class="header__promo-link">
+          <span class="icon icon__yellow-arrow">Subscribe to&nbsp;our Newsletter For New &amp;&nbsp;latest Blogs and
+            Resources</span>
+        </a>
+      </div>
+    </div>
+    <div class="header__body">
+      <div class="header__body-inner container">
+        <a href="/" class="header__logo logo" aria-label="Home" t itle="Home">
+          <img src="./icons/logo.svg" alt="FutureTech" class="logo__image" width="179" height="50">
+        </a>
+
+        <div class="header__overlay">
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="./" class="header__menu-link is-active">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="./" class="header__menu-link">News</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="./" class="header__menu-link">Podcasts</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="./" class="header__menu-link">Resources</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="./" class="header__contacts-us-link button button__accent">Contact Us</a>
+        </div>
+
+        <button class="header__burger-button burger-button  visible-mobail" aria-label="Open Menu" title="Open menu">
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
 </body>
 
 </html>
