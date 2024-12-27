@@ -1,0 +1,74 @@
+@use "../helpers" as *;
+
+.footer {
+	color: var(--color-dark-40);
+	&__body {
+		padding-block: fluid(80, 40);
+		border-bottom: var(--border);
+	}
+
+	&__menu {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		align-items: start;
+		column-gap: fluid(80, 20);
+
+		&-column {
+			display: grid;
+			row-gap: fluid(36, 16);
+		}
+
+		&-main-link {
+			color: var(--color-light);
+			font-weight: 500;
+			@include fluid-text(20, 16);
+		}
+	}
+
+	&__menu-list {
+		display: flex;
+		flex-direction: column;
+		row-gap: fluid(18, 8);
+	}
+
+	&__menu-item {
+		display: flex;
+		align-items: center;
+		column-gap: rem(8);
+	}
+
+	&__exstra {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: rem(1);
+		padding-block: rem(40);
+
+		@include laptop {
+			padding-block: rem(23);
+		}
+
+		@include mobail {
+			padding-block: rem(24);
+		}
+
+		&-menu {
+			&--list {
+				display: flex;
+			}
+
+			&--item {
+				&:not(:last-child) {
+					&::after {
+						content: "|";
+						margin-inline: rem(11);
+
+						@include laptop {
+							margin-inline: rem(8);
+						}
+					}
+				}
+			}
+		}
+	}
+}
