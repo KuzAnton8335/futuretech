@@ -13,9 +13,29 @@
 		align-items: start;
 		column-gap: fluid(80, 20);
 
+		@include table{
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: rem(40);
+		}
+
+		@include mobail{
+			row-gap: rem(20);
+		}
+
 		&-column {
 			display: grid;
 			row-gap: fluid(36, 16);
+
+			&:last-child{
+				@include table{
+					grid-column: -1 / 1;
+					.footer__menu-list{
+						flex-direction: row;
+						flex-wrap: wrap;
+						gap:rem(12);
+					}
+				}
+			}
 		}
 
 		&-main-link {
@@ -50,6 +70,8 @@
 
 		@include mobail {
 			padding-block: rem(24);
+			flex-direction: column;
+			row-gap: rem(20);
 		}
 
 		&-menu {
@@ -70,5 +92,11 @@
 				}
 			}
 		}
+	}
+
+	&__exstra-soc1als{
+		@include mobail {
+	order:-1;
+			}
 	}
 }
