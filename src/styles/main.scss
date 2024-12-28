@@ -13,6 +13,14 @@
 @use "./blocks/header";
 // /header
 
+//hero
+@use "./blocks/metrics";
+@use "./blocks/team";
+@use "./blocks/resurses_preview";
+@use "./blocks/advantage-card";
+@use "./blocks/hero";
+// /hero
+
 //footer
 @use "./blocks/bage";
 @use "./blocks/socials";
