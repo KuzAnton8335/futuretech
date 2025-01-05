@@ -2,11 +2,13 @@
 
 .hero {
 	&__main {
-		display: grid;
-		grid-template-columns: 60% auto;
-		grid-template-areas:
-			"body resorces_preview"
-			"metrics resorces_preview";
+		@include table-above {
+			display: grid;
+			grid-template-columns: 60% auto;
+			grid-template-areas:
+				"body resorces_preview"
+				"metrics resorces_preview";
+		}
 	}
 
 	&__body {
@@ -18,6 +20,12 @@
 		@include laptop {
 			padding-top: rem(100);
 			padding-right: rem(40);
+		}
+
+		@include table {
+			padding-right: 0;
+			padding-top: rem(40);
+			padding-bottom: rem(30);
 		}
 
 		@include mobail {
@@ -34,46 +42,93 @@
 		color: var(--color-dark-40);
 		&:not(:last-child) {
 			margin-bottom: rem(30);
+
+			@include mobail {
+				margin-bottom: rem(14);
+			}
 		}
 	}
 
 	&__title {
 		&:not(:last-child) {
 			margin-bottom: rem(20);
+
+			@include mobail {
+				margin-bottom: rem(10);
+			}
 		}
 	}
 
 	&__metrics {
 		grid-area: metrics;
-		border-top: var(--border);
+		@include table-above {
+			border-top: var(--border);
+		}
+
+		@include table {
+			::before {
+				width: 100vw;
+				right: calc(var(--container-padding-x) * -1);
+			}
+		}
 	}
 
 	&__resurses_preview {
 		grid-area: resorces_preview;
 		padding-left: rem(80);
 		padding-bottom: rem(80);
-		border-left: var(--border);
 		background: url("./images/resurses_preview/bg.png") 0 0 / cover no-repeat;
+
+		@include laptop {
+			padding-left: rem(50);
+			padding-bottom: rem(50);
+		}
+
+		@include table-above {
+			border-left: var(--border);
+		}
+
+		@include table {
+			width: 100vw;
+			margin-left: calc(var(--container-padding-x) * -1);
+			padding: rem(100) rem(40) rem(40);
+			background-image: url("./images/_resurses_preview/bg-mobail.png") 0 0 / cover no-repeat;
+			background-size: contain;
+		}
 	}
 
 	&__advantages {
 		border-block: var(--border);
 		&-list {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			@include table-above {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+			}
 		}
 
 		&-item {
 			--paddingX: #{rem(80)};
 			padding-block: rem(50);
 
-			&:not(:first-child) {
-				padding-left: var(--paddingX);
+			@include laptop {
+				--paddingX: #{rem(50)} padding-block: rem(40);
+			}
+			@include table-above {
+				&:not(:first-child) {
+					padding-left: var(--paddingX);
+				}
+
+				&:not(:last-child) {
+					padding-right: var(--paddingX);
+					border-right: var(--border);
+				}
 			}
 
-			&:not(:last-child) {
-				padding-right: var(--paddingX);
-				border-right: var(--border);
+			@include table {
+				padding-block: rem(30);
+				&:not(:last-child) {
+					border-bottom: var(--border);
+				}
 			}
 		}
 	}
