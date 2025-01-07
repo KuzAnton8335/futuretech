@@ -21,6 +21,14 @@
 @use "./blocks/hero";
 // /hero
 
+// section
+@use "./blocks/tag";
+@use "./blocks/section";
+@use "./blocks/list";
+@use "./blocks/tale";
+@use "./blocks/card";
+// /section
+
 //footer
 @use "./blocks/bage";
 @use "./blocks/socials";

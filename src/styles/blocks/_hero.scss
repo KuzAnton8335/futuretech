@@ -111,7 +111,8 @@
 			padding-block: rem(50);
 
 			@include laptop {
-				--paddingX: #{rem(50)} padding-block: rem(40);
+				--paddingX: #{rem(50)};
+				padding-block: rem(40);
 			}
 			@include table-above {
 				&:not(:first-child) {
