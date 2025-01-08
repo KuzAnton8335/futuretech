@@ -8,7 +8,7 @@
   <script type="module" src="./src/app/main.js"></script>
 </head>
 
-<!-- !!TODO:Остановился на времени 03:40 -->
+<!-- !!TODO:Остановился на времени 08:35 (2 видео) -->
 
 <body>
   <!-- header -->
@@ -231,6 +231,78 @@
             </div>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="block-title">
+      <header class="section__header">
+        <div class="section__header-inner container">
+          <div class="section__header-info">
+            <p class="section__subtitle tag">A Knowledge Treasure Trove</p>
+            <h2 class="section__title" id="block-title">Explore FutureTech&rsquo;s In-Depth Blog Posts</h2>
+          </div>
+        </div>
+        <a href="/" class="section__link button">
+          <span class="icon icon__yellow-arrow">View All Blogs</span>
+        </a>
+      </header>
+      <div class="section__body tabs" data-js-tabs>
+        <h3 class="visually-hidden" id="blog-category-title">
+          blog category
+        </h3>
+        <header class="tabs__header">
+          <div class="tabs__buttons container" role="tablist" aria-labelledby="blog-category-title">
+            <button class="tabs__button is-active" type="button" id="tab-1" role="tab" aria-controls="tabpanel-1"
+              data-js-tabsbutton aria-selected="true" tabindex="-1">
+              All
+            </button>
+            <button class="tabs__button" type="button" id="tab-2" role="tab" aria-controls="tabpanel-2"
+              data-js-tabsbutton aria-selected="false" tabindex="-1">
+              Quantum Computing
+            </button>
+            <button class="tabs__button" type="button" id="tab-3" role="tab" aria-controls="tabpanel-3"
+              data-js-tabsbutton aria-selected="false" tabindex="-1">
+              AI Ethics
+            </button>
+            <button class="tabs__button" type="button" id="tab-4" role="tab" aria-controls="tabpanel-4"
+              data-js-tabsbutton aria-selected="false" tabindex="-1">
+              Space Exploration
+            </button>
+            <button class="tabs__button" type="button" id="tab-5" role="tab" aria-controls="tabpanel-5"
+              data-js-tabsbutton aria-selected="false" tabindex="-1">
+              Biotechnology
+            </button>
+            <button class="tabs__button" type="button" id="tab-6" role="tab" aria-controls="tabpanel-6"
+              data-js-tabsbutton aria-selected="false" tabindex="-1">
+              Renewable Energy
+            </button>
+          </div>
+        </header>
+        <div class="tabs__body">
+          <div class="tabs__content is-active" id="tabpanel-1" aria-labelledby="tab-1" tabindex="0"
+            data-js-tabs-content>
+            <ul class="list">
+              <li class="list__item">
+                <article class="blog-gard container"></article>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs__content" id="tabpanel-2" aria-labelledby="tab-2" tabindex="0" data-js-tabs-content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, laborum.
+          </div>
+          <div class="tabs__content" id="tabpanel-3" aria-labelledby="tab-3" tabindex="0" data-js-tabs-content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, laborum.
+          </div>
+          <div class="tabs__content" id="tabpanel-4" aria-labelledby="tab-4" tabindex="0" data-js-tabs-content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, laborum.
+          </div>
+          <div class="tabs__content" id="tabpanel-5" aria-labelledby="tab-5" tabindex="0" data-js-tabs-content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, laborum.
+          </div>
+          <div class="tabs__content" id="tabpanel-6" aria-labelledby="tab-5" tabindex="0" data-js-tabs-content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, laborum.
+          </div>
+        </div>
       </div>
     </section>
   </main>
