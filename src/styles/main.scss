@@ -29,6 +29,13 @@
 @use "./blocks/card";
 // /section
 
+// blogs
+@use "./blocks/tabs";
+@use "./blocks/person-card";
+@use "./blocks/blog-actions";
+@use "./blocks/blog-card";
+// /blogs
+
 //footer
 @use "./blocks/bage";
 @use "./blocks/socials";
