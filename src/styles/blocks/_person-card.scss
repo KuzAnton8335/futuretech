@@ -1,1 +1,37 @@
 @use "../helpers" as *;
+
+.person__card {
+	display: flex;
+	align-items: center;
+	column-gap: fluid(16, 8);
+
+	&-image {
+		width: rem(80);
+		border-radius: 50%;
+		background-color: var(--color-dark-15);
+		@include laptop {
+			width: rem(60);
+		}
+	}
+
+	&-body {
+		display: grid;
+		@include laptop-above {
+			row-gap: rem(2);
+		}
+	}
+
+	&-name {
+		font-size: rem(20);
+		font-weight: 600;
+		color: var(--color-light);
+		@include laptop {
+			font-size: rem(18);
+		}
+	}
+
+	&-departmen {
+		font-size: rem(14);
+		color: var(--color-gray-60);
+	}
+}

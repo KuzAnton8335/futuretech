@@ -5,6 +5,22 @@
 		padding-block: fluid(120, 40);
 		background-color: var(--color-dark-10);
 
+		&-inner {
+			&:has(.section__link) {
+				display: grid;
+				align-items: center;
+				column-gap: 1rem;
+
+				@include mobail-above {
+					grid-template-columns: 1fr auto;
+				}
+
+				@include mobail {
+					row-gap: rem(30);
+				}
+			}
+		}
+
 		&-info {
 			display: grid;
 			align-items: center;
@@ -22,14 +38,5 @@
 
 	&__body {
 		border-block: var(--border);
-	}
-
-	&__header-info {
-		&:has(.section__link) {
-			display: grid;
-			grid-template-columns: 1fr auto;
-			align-items: center;
-			column-gap: 1rem;
-		}
 	}
 }
