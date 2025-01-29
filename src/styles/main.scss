@@ -40,6 +40,12 @@
 @use "./blocks/download-info";
 // /resurces
 
+// reviews
+@use "./blocks/bordered-grid";
+@use "./blocks/rating-view";
+@use "./blocks/review-card";
+// /reviews
+
 //footer
 @use "./blocks/bage";
 @use "./blocks/socials";

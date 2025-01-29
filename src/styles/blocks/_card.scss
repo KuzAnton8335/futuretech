@@ -53,7 +53,7 @@
 	&__body {
 		padding-right: 0;
 		@include table {
-			padding: rem(30) rem(16);
+			padding: rem(30) 0;
 		}
 	}
 
@@ -69,7 +69,6 @@
 		}
 
 		&__2-colons-alt {
-			grid-template-columns: auto 1fr;
 			row-gap: rem(30);
 			column-gap: rem(20);
 
@@ -78,8 +77,8 @@
 				column-gap: rem(16);
 			}
 
-			@include mobail {
-				column-gap: 0;
+			@include mobail-above {
+				grid-template-columns: auto 1fr;
 			}
 		}
 	}

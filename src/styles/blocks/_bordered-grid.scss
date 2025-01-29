@@ -1,0 +1,45 @@
+@use "../helpers" as *;
+
+.bordered-grid {
+	--columns: 1;
+	--itemPaddingY: fluid(80, 40);
+
+	display: grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+
+	&__2-cols {
+		--columns: 2;
+	}
+
+	&__3-cols {
+		--columns: 3;
+		--itemPaddingX: #{rem(50)};
+
+		@include laptop {
+			--itemPaddingX: #{rem(40)};
+		}
+
+		.bordered__grid-item {
+			&:nth-child(3n - 2),
+			&:nth-child(3n - 1) {
+				padding-right: var(--itemPaddingX);
+				border-right: var(--border);
+			}
+
+			// ЭЛЕМЕНТЫ во 2-ой колонке
+
+			&:nth-child(3n - 1) {
+				@include full-vw-centered-line(bottom);
+			}
+
+			&:nth-last-child(3n - 1),
+			&:nth-child(1) {
+				padding-left: var(--itemPaddingX);
+			}
+		}
+	}
+
+	&-item {
+		padding-block: var(--itemPaddingY);
+	}
+}
