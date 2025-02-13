@@ -51,6 +51,13 @@
 @use "./blocks/about__card";
 // /about
 
+//news
+@use "./blocks/_hero-alt";
+@use "./blocks/summary";
+@use "./blocks/news-card";
+@use "./blocks/news";
+// /news
+
 //footer
 @use "./blocks/bage";
 @use "./blocks/socials";

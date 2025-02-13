@@ -1,0 +1,19 @@
+@use "../helpers" as *;
+.hero-alt {
+	padding-top: fluid(130, 40);
+	padding-bottom: fluid(150, 40);
+
+	&__header-inner {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: rem(20) rem(80);
+
+		@include laptop {
+			column-gap: rem(60);
+		}
+
+		@include mobail {
+			row-gap: rem(14);
+		}
+	}
+}
