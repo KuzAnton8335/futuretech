@@ -1,19 +1,42 @@
 @use "../helpers" as *;
 .hero-alt {
-	padding-top: fluid(130, 40);
-	padding-bottom: fluid(150, 40);
+	&__header {
+		padding-top: fluid(130, 40);
+		padding-bottom: fluid(150, 40);
+		border-bottom: var(--border);
+	}
 
 	&__header-inner {
 		display: grid;
-		grid-template-columns: auto 1fr;
+		align-items: center;
 		gap: rem(20) rem(80);
 
 		@include laptop {
 			column-gap: rem(60);
 		}
 
+		@include mobail-above {
+			grid-template-columns: auto 1fr;
+		}
+
 		@include mobail {
 			row-gap: rem(14);
 		}
+	}
+
+	&__title {
+		grid-column: -1 / 1;
+	}
+
+	&__title-hidden-part {
+		@include mobail-above {
+			@include visually-hidden;
+		}
+	}
+}
+
+.hidden-mobail {
+	@include mobail {
+		display: none;
 	}
 }
