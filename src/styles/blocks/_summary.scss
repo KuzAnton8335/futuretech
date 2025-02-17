@@ -1,5 +1,6 @@
 @use "../helpers" as *;
 .summary {
+	padding-block: fluid(50, 20);
 	&__list {
 		display: flex;
 		column-gap: fluid(50, 20);
@@ -12,5 +13,9 @@
 		@include laptop {
 			row-gap: rem(2);
 		}
+	}
+	&__value {
+		align-self: center;
+		color: var(--color-light);
 	}
 }

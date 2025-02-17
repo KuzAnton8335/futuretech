@@ -9,6 +9,28 @@
 
 	&__2-cols {
 		--columns: 2;
+		--itemPaddingX: #{rem(80)};
+
+		@include laptop {
+			--itemPaddingX: #{rem(50)};
+		}
+
+		@include mobail {
+			--columns: 1;
+		}
+
+		.bordered__grid-item {
+			padding-top: fluid(60, 40);
+			&:nth-child(odd) {
+				padding-right: var(--itemPaddingX);
+				border-right: var(--border);
+			}
+
+			&:nth-child(even) {
+				@include full-vw-centered-line(bottom, auto, 100%, 50%);
+				padding-left: var(--itemPaddingX);
+			}
+		}
 	}
 
 	&__3-cols {
@@ -45,15 +67,5 @@
 		@include table {
 			--columns: 1;
 		}
-	}
-}
-
-.bordered__grid-item {
-	@include table {
-		border-bottom: var(--border);
-	}
-
-	@include mobail {
-		padding-block: var(--itemPaddingY);
 	}
 }
