@@ -15,20 +15,26 @@
 			--itemPaddingX: #{rem(50)};
 		}
 
-		@include mobail {
-			--columns: 1;
+		@include mobail-above {
+			.bordered__grid-item {
+				padding-top: fluid(60, 40);
+				&:nth-child(odd) {
+					padding-right: var(--itemPaddingX);
+					border-right: var(--border);
+				}
+
+				&:nth-child(even) {
+					@include full-vw-centered-line(bottom, auto, 100%, 50%);
+					padding-left: var(--itemPaddingX);
+				}
+			}
 		}
 
-		.bordered__grid-item {
-			padding-top: fluid(60, 40);
-			&:nth-child(odd) {
-				padding-right: var(--itemPaddingX);
-				border-right: var(--border);
-			}
-
-			&:nth-child(even) {
-				@include full-vw-centered-line(bottom, auto, 100%, 50%);
-				padding-left: var(--itemPaddingX);
+		@include mobail {
+			--columns: 1;
+			padding-top: rem(40);
+			.bordered__grid-item:not(:last-child) {
+				border-bottom: var(--border);
 			}
 		}
 	}

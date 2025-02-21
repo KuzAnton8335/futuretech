@@ -1,4 +1,29 @@
 @use "../helpers" as *;
 
 .video-card {
+	padding-bottom: fluid(80, 40);
+	&__body-title {
+		font-size: rem(24);
+		font-weight: 600;
+
+		@include laptop {
+			font-size: rem(20);
+		}
+
+		@include mobail {
+			font-size: rem(18);
+		}
+	}
+
+	&__body-subtitle p {
+		font-size: rem(18);
+
+		@include laptop {
+			font-size: rem(16);
+		}
+
+		@include mobail {
+			font-size: rem(14);
+		}
+	}
 }
