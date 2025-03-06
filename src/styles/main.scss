@@ -5,6 +5,8 @@
 @use "globals";
 
 @use "helpers" as *;
+
+@use "./blocks/expandable-content";
 // header
 @use "./blocks/icons";
 @use "./blocks/logo";
@@ -59,6 +61,12 @@
 @use "./blocks/video-player";
 @use "./blocks/video-card";
 // /news
+
+// blog
+@use "./blocks/table-of-contents";
+@use "./blocks/blog-details";
+
+// /blog
 
 //footer
 @use "./blocks/bage";

@@ -61,7 +61,7 @@
 
   <main class="main">
     <section class="blog-details" aria-labelledby="blod-details-title">
-      <header class="blog-details__banner">
+      <header class="blog-details__banner" style="--bgImg:url('../../public/images/blog-details/banner.jpg')">
         <div class="blog-details__banner-inner container">
           <h1 class="blog-details__title" id="blod-details-title">The Rise of&nbsp;Artificial Intelligence
             in&nbsp;Healthcare</h1>
@@ -70,14 +70,14 @@
       <div class="blog-details__body">
         <div class="blog-details__body-inner container">
           <div class="blog-details__content">
-            <div class="blog-details__into">
+            <div class="blog-details__intro full-vw-line full-vw-line__bottom full-vw-line__left">
               <h2 class="h6">Introduction</h2>
               <p>Artificial Intelligence (AI) has emerged as&nbsp;a&nbsp;transformative force in&nbsp;the healthcare
                 industry, reshaping patient care, diagnostics, and research. In&nbsp;this blog post, we&nbsp;explore the
                 profound impact of&nbsp;AI in&nbsp;healthcare, from revolutionizing diagnostic accuracy
                 to&nbsp;enhancing patient outcomes.</p>
             </div>
-            <div class="blog-details__main">
+            <div class="blog-details__main expandable-content" data-js-expandable-content>
               <h2 class="h4">Artificial Intelligence (AI)</h2>
               <p>Artificial Intelligence (AI) has permeated virtually every aspect of&nbsp;our lives, and healthcare
                 is&nbsp;no&nbsp;exception. The integration of&nbsp;AI in&nbsp;healthcare is&nbsp;ushering
@@ -118,13 +118,14 @@
                 be&nbsp;overlooked by&nbsp;the human eye. This is&nbsp;particularly valuable in&nbsp;early disease
                 detection. For instance, AI&nbsp;can aid radiologists in&nbsp;detecting minute irregularities
                 in&nbsp;mammograms or&nbsp;identifying critical findings in&nbsp;chest&nbsp;X</p>
-              <button class="blog-details__red-full-button button" type="button">
-                <span class="icon icon--gray-arrow-down">Read Full Blog</span>
+              <button class="blog-details__red-full-button button expandable-content__button" type="button"
+                data-js-expandable-content-button>
+                <span class="icon icon__gray-arrow-down">Read Full Blog</span>
               </button>
             </div>
           </div>
           <div class="blog-details__info">
-            <div class="blog-details__actions blog-actions">
+            <div class="blog-details__actions blog-actions full-vw-line full-vw-line__bottom full-vw-line__right">
               <ul class="blog-actions__list">
                 <li class="blog-actions__item">
                   <button class="blog-actions__button is-active" type="button" aria-label="Dislike" title="Dislike">
@@ -164,9 +165,9 @@
                 </li>
               </ul>
             </div>
-            <div class="blog-details__summary summary">
+            <div class="blog-details__summary summary summary--2-colls">
               <dl class="summary__list">
-                <div class="summary__item">
+                <div class="summary__item ">
                   <dt class="summary__key">Publication Date</dt>
                   <dt class="summary__value"><time datatime="2023-10-15">October 15, 2023</time></dt>
                 </div>
@@ -182,7 +183,7 @@
                   <dt class="summary__key">Author Name</dt>
                   <dt class="summary__value">Dr. Emily Walker</dt>
                 </div>
-                <div class="summary__item">
+                <div class="summary__item summary__item--wide">
                   <dt class="summary__key">Table of Contents</dt>
                   <dt class="summary__value">
                     <div class="table-of-contens">
@@ -350,6 +351,51 @@
               </a>
             </div>
 
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <div class="about__inner container">
+        <header class="about__header">
+          <img src="./public/images/about/about-log.svg" alt="" class="about__icon" width="150" height="150">
+          <div class="about__info">
+            <p class="about__subtitle tag">Learn, Connect, and Innovate</p>
+            <h2 class="about__title" id="about-title">Be&nbsp;Part of&nbsp;the Future Tech Revolution</h2>
+          </div>
+          <div class="about__description">
+            <p>Immerse yourself in&nbsp;the world of&nbsp;future technology. Explore our comprehensive resources,
+              connect with fellow tech enthusiasts, and drive innovation in&nbsp;the industry. Join a&nbsp;dynamic
+              community of&nbsp;forward-thinkers.</p>
+          </div>
+        </header>
+        <ul class="about__list ">
+          <li class="about__item">
+            <a href="/" class="about__card tale ">
+              <h3 class="about__card-title circle-icon">Resource Access</h3>
+              <div class="about__card-description">
+                <p>Visitors can access a&nbsp;wide range of&nbsp;resources, including ebooks, whitepapers, reports.</p>
+              </div>
+            </a>
+          </li>
+          <li class="about__item">
+            <a href="/" class="about__card tale ">
+              <h3 class="about__card-title circle-icon">Community Forum</h3>
+              <div class="about__card-description">
+                <p>Join our active community forum to&nbsp;discuss industry trends, share insights, and collaborate with
+                  peers.</p>
+              </div>
+            </a>
+          </li>
+          <li class="about__item">
+            <a href="/" class="about__card tale ">
+              <h3 class="about__card-title circle-icon">Tech Events</h3>
+              <div class="about__card-description">
+                <p>Stay updated on&nbsp;upcoming tech events, webinars, and conferences to&nbsp;enhance your knowledge.
+                </p>
+              </div>
+            </a>
           </li>
         </ul>
       </div>

@@ -1,5 +1,6 @@
 import "normalize.css";
 import "../styles/main.scss";
+import ExpandanbleContentCollection from "./ExpandanbleContent";
 import Header from "./Header.js";
 import TabsCollection from "./Tabs.js";
 import VideoPlayerCollection from "./VideoPlayer.js";
@@ -10,3 +11,5 @@ new Header();
 new TabsCollection();
 // логика для видео плеера
 new VideoPlayerCollection();
+// логика для появления контента при нажатии на кнопку
+new ExpandanbleContentCollection();
